@@ -1,0 +1,44 @@
+# Entorno virtual
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Configuración de IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs y cache
+*.log
+*.cache
+*.sqlite3
+*.db
+*.pot
+*.mo
+
+# Archivos de configuración local
+*.env
+.env.local
+.env.*.local
+
+# Docker
+docker-compose.override.yml
+docker-compose.override.*.yml
+
+# Distribución / empaquetado
+dist/
+build/
+*.egg-info/
+*.egg
+__pypackages__/
+
+# FastAPI / Uvicorn
+*.pid
