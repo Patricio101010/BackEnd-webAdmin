@@ -9,27 +9,22 @@ __pycache__/
 # Configuración de IDEs
 .vscode/
 .idea/
-*.sublime-project
-*.sublime-workspace
 
 # Archivos de sistema
 .DS_Store
 Thumbs.db
 
-# Logs y cache
+# Logs y bases de datos locales
 *.log
-*.cache
 *.sqlite3
 *.db
-*.pot
-*.mo
 
 # Archivos de configuración local
 *.env
 .env.local
 .env.*.local
 
-# Docker
+# Docker overrides
 docker-compose.override.yml
 docker-compose.override.*.yml
 
