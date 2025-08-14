@@ -1,51 +1,22 @@
 # Finanza-web-app
 
-Aplicación web para la gestión de finanzas personales e inversiones, construida con tecnologías modernas para ofrecer una experiencia fluida y escalable.
-
+API para la gestión de finanzas personales e inversiones, construida con FastAPI y diseñada para ser rápida, escalable y fácil de mantener.
 ---
 
 ## 🚀 Tecnologías
 
-**Frontend:**
-- React 19 + TypeScript
-- Vite
-- TailwindCSS (Atomic Design)
-
 **Backend:**
-- Python (FastAPI o Flask)
-- Zod para validación
-
-**Otras tecnologías:**
-- Zustand (Estado global)
-- React Hook Form + Zod (Formularios)
-- React Router DOM v7 (Enrutamiento)
-- Vitest + React Testing Library (Testing)
-
+- 🐍 Python 3.10+
+- ⚡ FastAPI (Framework web moderno y rápido)
+- 🧬 Pydantic (Validación y serialización de datos)
+- 🐳 Docker (Entorno reproducible y despliegue)
+- 🧪 Pytest (Pruebas unitarias y de integración)
+- 🗃️ ORM (SQLAlchemy o Tortoise, según tu elección)
 ---
 
 ## 🧱 Estructura del Proyecto
 
-### Frontend (`frontend/`)
-
-```plaintext
-src/
-├── components/              # Componentes organizados por Atomic Design
-│   ├── atoms/               # Botones, inputs, íconos
-│   ├── molecules/           # Combinaciones simples de átomos (ej. SearchBar)
-│   ├── particles/           # Elementos dinámicos/abstractos (ej. Skeleton)
-│   ├── organisms/           # Componentes con lógica y estado (ej. Navbar)
-│   └── templates/           # Layouts reutilizables (ej. Dashboard, Auth)
-├── pages/                   # Vistas y rutas (Home, Login, Transactions)
-├── store/                   # Zustand para estado global
-├── hooks/                   # Hooks personalizados (useAuth, useFetch)
-├── utils/                   # Funciones auxiliares (formatos, fechas)
-├── types/                   # Tipos TypeScript
-├── api/                     # Cliente HTTP con axios y endpoints
-├── App.tsx                  # Configuración de rutas
-└── main.tsx                 # Entrada principal de la app
-```
-### Frontend (`frontend/`)
-
+### Backend 
 ```plaintext
 app/
 ├── models/                  # Modelos de datos (ORM o clases)
@@ -56,9 +27,33 @@ app/
 tests/                       # Pruebas unitarias e integración
 requirements.txt             # Dependencias del proyecto
 main.py                      # Punto de entrada de la API
+Dockerfile                   # Imagen Docker para despliegue
 ```
 
 🛠️ Instalación
 Requisitos previos
-Node.js (v18+ recomendada)
 Python 3.10+
+
+(Opcional) Docker y Docker Compose
+
+Instalación local
+```plaintext
+# Crear entorno virtual
+python -m venv venv
+source venv/bin/activate  # En Linux/macOS
+venv\Scripts\activate     # En Windows
+
+# Instalar dependencias
+pip install -r requirements.txt
+
+# Ejecutar el servidor
+uvicorn app.main:app --reload
+
+```
+📚 Documentación de la API
+FastAPI genera documentación automática con Swagger UI y Redoc. Una vez que el servidor está corriendo, puedes acceder a:
+
+http://localhost:8000/docs → Swagger UI
+
+http://localhost:8000/redoc → Redoc
+
