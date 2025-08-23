@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "ms-python.python",                 // Soporte completo de Python
+    "ms-python.vscode-pylance",         // Autocompletado avanzado y análisis de tipos
+    "littlefoxteam.vscode-python-test-adapter", // Ejecutar y depurar Pytest
+    "humao.rest-client",                // Para probar endpoints REST
+    "rangav.vscode-thunder-client",     // Alternativa visual a Postman
+    "ms-python.black-formatter",        // Formateo automático de código
+    "ms-python.flake8",                 // Linter para mantener buenas prácticas
+    "mtxr.sqltools",                    // Conexión a bases de datos / ORM
+    "bungcip.better-toml"               // Útil para Tortoise ORM si usas TOML
+  ]
+}
