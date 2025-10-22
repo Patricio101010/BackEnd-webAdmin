@@ -1,0 +1,1 @@
+ # Autenticación, JWT, hashing de contraseñas, permisos y roles

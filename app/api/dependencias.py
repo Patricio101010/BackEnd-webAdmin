@@ -1,0 +1,1 @@
+# Dependencias inyectables para la aplicación FastAPI

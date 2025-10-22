@@ -18,11 +18,60 @@ API para la gestión de finanzas personales e inversiones, construida con FastAP
 
 ### Backend 
 ```plaintext
-app/
-├── models/                  # Modelos de datos (ORM o clases)
-├── routes/                  # Endpoints y rutas HTTP
-├── services/                # Lógica de negocio
-└── schemas/                 # Validaciones (Pydantic o similar)
+mi_app/
+│
+├── main.py                     # Punto de entrada
+├── config/                     # Configuración
+│   ├── __init__.py
+│   ├── settings.py            # Variables de entorno y configuración
+│   └── database.py            # Configuración específica de DB
+├── api/                       # Capa de presentación
+│   ├── __init__.py
+│   ├── routes/                # Rutas organizadas por módulo
+│   │   ├── __init__.py
+│   │   ├── usuarios.py
+│   │   └── auth.py
+│   └── dependencies.py        # Dependencias inyectables
+├── core/                      # Núcleo de la aplicación
+│   ├── __init__.py
+│   ├── security.py            # Autenticación, JWT, hashing
+│   └── exceptions.py          # Excepciones personalizadas
+├── services/                  # Lógica de negocio
+│   ├── __init__.py
+│   ├── usuario_service.py
+│   └── base_service.py        # Servicio base con operaciones CRUD
+├── repositories/              # Patrón Repository
+│   ├── __init__.py
+│   ├── usuario_repository.py
+│   ├── base_repository.py     # Repository base
+│   └── interfaces/            # Interfaces/abstract classes
+│       ├── __init__.py
+│       └── usuario_repository_interface.py
+├── models/                    # Modelos de datos
+│   ├── __init__.py
+│   ├── domain/                # Modelos de dominio
+│   │   ├── __init__.py
+│   │   └── usuario.py
+│   ├── schemas/               # Esquemas Pydantic
+│   │   ├── __init__.py
+│   │   ├── usuario_schema.py
+│   │   └── request_response.py # Schemas para request/response
+│   └── enums/                 # Enumeraciones
+│       ├── __init__.py
+│       └── usuario_enum.py
+├── db/                        # Configuración de base de datos
+│   ├── __init__.py
+│   ├── database.py            # Conexión y session factory
+│   └── migrations/            # Migraciones (si usas Alembic)
+├── utils/                     # Utilidades
+│   ├── __init__.py
+│   └── validators.py          # Validadores personalizados
+├── tests/                     # Pruebas
+│   ├── __init__.py
+│   ├── conftest.py            # Configuración de pytest
+│   ├── test_usuarios.py
+│   └── integration/           # Pruebas de integración
+└── requirements.txt
 
 tests/                       # Pruebas unitarias e integración
 requirements.txt             # Dependencias del proyecto

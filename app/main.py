@@ -1,11 +1,9 @@
 from fastapi import FastAPI
-from app.routes import user
-from app.database import init_db
+from app.database import engine, Base
+from app.routes import user_routes
 
-app = FastAPI()
+Base.metadata.create_all(bind=engine)
 
-app.include_router(user.router)
+app = FastAPI(title="API Usuarios")
 
-@app.on_event("startup")
-async def startup():
-    await init_db()
+app.include_router(user_routes.router)
