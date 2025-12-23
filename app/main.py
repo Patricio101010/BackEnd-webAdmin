@@ -1,9 +1,12 @@
+# main.py
 from fastapi import FastAPI
-from app.database import engine, Base
-from app.routes import user_routes
+from api.routes import tipo_cuenta   # importa tus rutas
 
-Base.metadata.create_all(bind=engine)
+app = FastAPI(title="Finanzas Personales API")
 
-app = FastAPI(title="API Usuarios")
+# registrar rutas
+app.include_router(tipo_cuenta.router)
 
-app.include_router(user_routes.router)
+@app.get("/")
+def read_root():
+    return {"message": "API funcionando correctamente"}

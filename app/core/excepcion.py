@@ -1,1 +1,0 @@
-# Excepciones personalizadas para la aplicación
