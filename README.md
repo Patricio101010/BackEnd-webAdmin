@@ -6,18 +6,21 @@ API para la gestión de finanzas personales e inversiones, construida con FastAP
 ## 🚀 Tecnologías
 
 **Backend:**
-- 🐍 Python 3.10+
-- ⚡ FastAPI (Framework web moderno y rápido)
-- 🧬 Pydantic (Validación y serialización de datos)
-- 🐳 Docker (Entorno reproducible y despliegue)
-- 🧪 Pytest (Pruebas unitarias y de integración)
-- 🗃️ ORM (SQLAlchemy o Tortoise, según tu elección)
+- 🐍 **Python 3.10+**
+- ⚡ **Framework:** FastAPI
+- 🗃️ **ORM:** SQLAlchemy 2.0
+- 🗄️ **DB inicial:** SQL Server
+- 🔁 **Migraciones:** Alembic
+- 🔐 **Auth:** JWT (OAuth2PasswordBearer)
+- 🧬 **Config:** Pydantic Settings
+- 🧪 **Tests:** Pytest + httpx
+- 🐳 **Docker:** Entorno reproducible y despliegue
 ---
 
 ## 🧱 Estructura del Proyecto
 
 ### Backend 
-```plaintext
+```
 mi_app/
 │
 ├── main.py                     # Punto de entrada
@@ -106,3 +109,20 @@ http://localhost:8000/docs → Swagger UI
 
 http://localhost:8000/redoc → Redoc
 
+---
+
+# 📦 Dependencias Principales
+## Crear el proyecto base con FastAPI y SQLAlchemy:
+```mkdir finanza-web-app
+cd finanza-web-app
+python -m venv venv
+venv\Scripts\activate
+```
+## Comando pip install para instalar las dependencias principales:
+
+``` plaintext
+pip install fastapi uvicorn sqlalchemy pyodbc alembic pydantic-settings python-jose passlib[bcrypt] pytest httpx
+```
+
+---
+## Estructura de carpetas y archivos
